@@ -1,22 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110475947-5"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+<html lang="en-us">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110475947-5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-    gtag('config', 'UA-110475947-5');
-  </script>
-	
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      gtag('config', 'UA-110475947-5');
+    </script>
 
-  <title>Two-Legged Dog</title>
-</head>
-<body>
-  Hello, World!
-</body>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Two-Legged Dog</title>
+
+    <link rel="shortcut icon" href="../../Dog/Builds/Dog_Web/TemplateData/favicon.ico">
+    <link rel="stylesheet" href="../../Dog/Builds/Dog_Web/TemplateData/style.css">
+
+    <script src="../../Dog/Builds/Dog_Web/TemplateData/UnityProgress.js"></script>
+    <script src="../../Dog/Builds/Dog_Web/Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Dog_Web.json", {onProgress: UnityProgress});
+    </script>
+  </head>
+  <body>
+    <div class="webgl-content">
+      <div id="unityContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <div class="title">Two-Legged Dog</div>
+      </div>
+    </div>
+  </body>
 </html>
